@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+     
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  padding: 3%;
+    background-color: whitesmoke;
+    -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    box-shadow: 0 10px 20px black;
+   }
+a{
+    color: black;
+}
+.links{
+    display: flex;
+    gap: 20px;
+    font-family: "Black Ops One", system-ui;
+   
+  }
+.logo{
+    font-family: "Orbitron", sans-serif;
+display: flex;
+align-items: center;
+gap: 30px;}
+
+.main{
+  height: 75vh;
+    width:100%;
+   border: 2px solid black;
+    background-image: url('rarri.jpeg');
+    background-size:cover;
+    background-repeat: no-repeat;
+  display: flex;
+
+}
+ 
+
+
+
+.about{
+    width: 100%;
+   
+    background-color: rgba(0, 0, 0, 0.651);
+    color: white;
+ 
+    display: flex;
+    justify-content: center;
+   
+}
+.texts{
+    width: 80%;
+  margin-top: 10%;
+  
+}
+.texts p{
+    font-size: 1.3em;
+    
+}
+
+.texts h1{
+    font-size: 2.3em;
+}
+.texts button{
+    width: 100%;
+    height: 4vh;
+    background-color: rgb(161, 0, 0);
+    color: whitesmoke;
+    font-family: "Black Ops One", system-ui;
+    font-size: 1.6em;
+}
+.footer{
+  position: fixed;
+  height: 11vh;
+  bottom: 0;
+    width: 100%;
+    background-color: rgb(52, 52, 52);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    font-family: "Black Ops One", system-ui;
+}
+.main2{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+  width: 80%;
+  font-size: 1.7em;
+}
+.rar{
+  width: 100%;
+  height: 35vh;
+}
+.text button{
+  width: 100%;
+ 
+  background-color: rgb(161, 0, 0);
+  color: whitesmoke;
+  font-family: "Black Ops One", system-ui;
+  font-size: 1.6em;
+}
+
+
+@media screen  and (min-width:1700px){
+ .header{
+  height: 4vh;
+ }
+ .footer{
+  height: 14.3vh;
+ }
+
+}
+
+@-webkit-keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+ 
