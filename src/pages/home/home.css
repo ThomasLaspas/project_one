@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
      
 .header{
+  width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,8 +12,13 @@
     animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     box-shadow: 0 10px 20px black;
    }
-a{
+.Link{
     color: black;
+    text-decoration: none;
+}
+
+.grid{
+  padding: 5%;
 }
 .links{
     display: flex;
@@ -27,17 +33,36 @@ align-items: center;
 gap: 30px;}
 
 .main{
-  height: 75vh;
+ height: 100vh;
     width:100%;
    border: 2px solid black;
     background-image: url('rarri.jpeg');
     background-size:cover;
     background-repeat: no-repeat;
   display: flex;
+  
 
 }
- 
-
+.card{
+  width: 80%;
+  border: 1px solid gray;
+  box-shadow: 0 0 10px grey;
+  
+  }
+.card img{
+  height: 25vh;
+  width: 100%;
+}
+.card h5, h4{
+  padding: 5%;
+  font-size: 1.4em;
+}
+.cont{
+ display: grid;
+ grid-template-columns: 50% 50%;
+ place-items: center;
+ row-gap: 40px;
+}
 
 
 .about{
@@ -52,7 +77,7 @@ gap: 30px;}
 }
 .texts{
     width: 80%;
-  margin-top: 10%;
+  margin-top: 20%;
   
 }
 .texts p{
@@ -72,9 +97,8 @@ gap: 30px;}
     font-size: 1.6em;
 }
 .footer{
-  position: fixed;
-  height: 11vh;
-  bottom: 0;
+  
+  padding: 4%;
     width: 100%;
     background-color: rgb(52, 52, 52);
     display: flex;
@@ -84,7 +108,7 @@ gap: 30px;}
     font-family: "Black Ops One", system-ui;
 }
 .main2{
-    height: 70vh;
+    height: 90vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -97,27 +121,68 @@ gap: 30px;}
 }
 .rar{
   width: 100%;
-  height: 35vh;
+  height: 50vh;
 }
 .text button{
   width: 100%;
- 
+ background-color: rgb(161, 0, 0);
+  color: whitesmoke;
+  font-family: "Black Ops One", system-ui;
+  font-size: 1.6em;
+  
+}
+.one{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.finalc{
+  width: 80%;
+}
+.finalc img{
+  width: 100%;
+  margin-top: 5%;
+}
+.finalc button{
   background-color: rgb(161, 0, 0);
   color: whitesmoke;
   font-family: "Black Ops One", system-ui;
   font-size: 1.6em;
+  width: 100%;
 }
-
+.card-body{
+  display: flex;
+  justify-content: space-between;
+}
 
 @media screen  and (min-width:1700px){
  .header{
   height: 4vh;
  }
  .footer{
-  height: 14.3vh;
+  padding: 2%;
  }
+ .card img{
+  height: 35vh;
+  width: 100%;
+}
 
 }
+@media screen  and (max-width:500px){
+  .header{
+   font-size: 0.4em;
+  }
+  .logo img{
+    width: 40px;
+    height: 40px;
+  }
+  .footer{
+   height: 14.3vh;
+   position: fixed;
+   bottom: 0;
+  }
+ 
+ }
 
 @-webkit-keyframes focus-in-expand {
     0% {
@@ -145,4 +210,62 @@ gap: 30px;}
       opacity: 1;
     }
   }
- 
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    height: 96px;
+    width: 96px;
+    animation: rotate_3922 1.2s linear infinite;
+    background-color: #9b59b6;
+    background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
+  }
+  
+  .container span {
+    position: absolute;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    background-color: #9b59b6;
+    background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
+  }
+  
+  .container span:nth-of-type(1) {
+    filter: blur(5px);
+  }
+  
+  .container span:nth-of-type(2) {
+    filter: blur(10px);
+  }
+  
+  .container span:nth-of-type(3) {
+    filter: blur(25px);
+  }
+  
+  .container span:nth-of-type(4) {
+    filter: blur(50px);
+  }
+  
+  .container::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background-color: #fff;
+    border: solid 5px #ffffff;
+    border-radius: 50%;
+  }
+  
+  @keyframes rotate_3922 {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  

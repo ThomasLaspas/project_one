@@ -1,5 +1,5 @@
 import '../../index.css'
-
+import { Link } from 'react-router-dom'
 export default function Main(){
     return(
        <div className='main'>
@@ -11,7 +11,7 @@ export default function Main(){
 <p>This year meybe be not our year, but trust me 
     mate next year with lewis in our side we gona destroy them.
 </p><br/> <br/>
-<button>Find your car</button>
+  <button>Find your car</button>
  </div>
 </div>
 </div>
