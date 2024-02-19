@@ -18,7 +18,7 @@ export default function Main2(){
                </p>
                <div><br/>
                 <button>Explore our cars</button>
-               </div>
+               </div><br/><br/>
         </div>
         </div>
     )

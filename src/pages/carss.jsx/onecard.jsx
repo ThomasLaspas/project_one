@@ -33,7 +33,7 @@ console.log(valu)
 })*/
 
     return (<div className='one'>
-<Header/><br/>
+<br/>
 <div className='finalc'>
    {valu?(
      <Final
@@ -45,8 +45,8 @@ console.log(valu)
      />
    ):<Load/>}
    <br/> <br/><button className="btn" type="button" >Button</button> <br/>
-</div><br/> <br/>
-<Footer/>
+</div><br/> <br/><br/><br/><br/><br/>
+
 
 
     </div>)

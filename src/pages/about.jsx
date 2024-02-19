@@ -8,9 +8,10 @@ export default function About(){
 
     return(
         <div>
-            <Header/>
+           
             <Main2/>
-            <Footer/>
+            <br/><br/>
+          
             
         </div>
     )

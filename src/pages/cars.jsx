@@ -12,16 +12,12 @@ useEffect(()=>{
     .then(data =>setVal(data.cars))
 },[])
 
-const[idd,setIdd]=useState(0)
-function abc(id){
-    console.log(id)
-    return(id)
-}
+
 
 const a=val.map(val=>{
     return(
         <Main4 
-        click={()=>abc(val.id)}
+      
         id={val.id}
         key={val.id}
         name={val.name}
@@ -33,10 +29,10 @@ const a=val.map(val=>{
 
     return (
         <>
-        <Header/><br/>
+       <br/>
         <div className='cont'>
 {a}</div><br/>
-        <Footer/>
+        
         </>
     )
 }
