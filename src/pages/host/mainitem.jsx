@@ -1,35 +1,33 @@
 import '../home/home.css'
-import Load from '../carss.jsx/loader';
-import { NavLink } from 'react-router-dom'
+import Load from '../cars/loader';
+import * as React from 'react';
+import { NavLink, useLoaderData } from 'react-router-dom'
 import EditIcon from '@mui/icons-material/Edit';
-import { Outlet,useOutletContext } from "react-router-dom";
-import { useState,useEffect } from 'react';
+import { Outlet,Await,defer } from "react-router-dom";
 import { useParams } from 'react-router-dom';
+import {getCarsd} from '../../utilities/fetch'
+import { requireAuth } from '../../utilities/auth';
+
+
+export  async function Load4({params,request}){
+    await requireAuth(request)
+    return defer({cars:getCarsd(params.id)}) 
+}
 export default function Mainls(){
     const params=useParams()
-    const [valu,setValu]=useState(null)
-    useEffect(()=>{
-        fetch(`/api/host/listed_cars/${params.id}`)
-        .then(res=>res.json())
-        .then(data=>setValu(data.cars))
-    },[params.id])
-   
+  const valu=useLoaderData()
 
-console.log(valu)
-
-
-    return(
-        <>
-        
-        <div className='list'>
+  function rendCar(cars){
+return(<>
+<div className='list'>
 
 
 <div className='carlist' id='car'>
     <div className='first'>
-{valu?<img src={valu.img} height={300} width={300}/>:<Load/>}
+<img src={cars.img} height={300} width={300}/>
         <div>
-      {valu?<h1>{valu.name}</h1>:<Load/>} 
-      {valu? <h3>{valu.price}</h3>:<Load/>}
+      <h1>{cars.name}</h1>
+    <h3>{cars.price}</h3>
         </div>
     </div>
     <div className='edit'>
@@ -41,10 +39,22 @@ console.log(valu)
         </nav>
         <EditIcon id='icon'/>
     </div>
-    <Outlet context={[valu,setValu]}/>
+    <Outlet context={[cars]}/>
     
 </div>
-</div><br/><br/>
+</div>
+</>)
+  }
+
+ 
+    return(
+        <>
+        <React.Suspense fallback={<Load/>}>
+            <Await resolve={valu.cars}>
+                 {rendCar}
+                 </Await>
+        </React.Suspense>
+        <br/><br/>
         </>
     )
 }

@@ -1,7 +1,7 @@
 import '../../index.css'
-
 export default function Footer(){
-    const currentDate = new Date();
+//change the year automatically
+const currentDate = new Date();
 const currentYear = currentDate.getFullYear();
     return(
        

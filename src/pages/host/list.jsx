@@ -6,7 +6,7 @@ export default function List(props){
 return(
     <>
    
-    <Link style={{textDecoration: 'none'}} to={`/host/listed_cars/${props.id}`}>
+    <Link style={{textDecoration: 'none'}} to={`${props.id}`} >
 <div className='list'>
 
 

@@ -1,7 +1,6 @@
 import '../home/home.css'
-import { useEffect,useState } from 'react'
 import { useParams,useOutletContext } from 'react-router-dom'
-import Load from '../carss.jsx/loader'
+import Load from '../cars/loader'
 
 
  

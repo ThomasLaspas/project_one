@@ -1,17 +1,23 @@
 import '../home/home.css'
+import * as React from 'react';
+import Load from '../cars/loader';
 import List from './list'
-import { useState,useEffect } from 'react'
-import { Link } from 'react-router-dom'
-export default function Lscars(){
+import { Link,useLoaderData,defer,Await } from 'react-router-dom'
+import {getHostCars} from '../../utilities/fetch'
+import { requireAuth } from '../../utilities/auth'
 
-    const [val, setVal]=useState([])
-    useEffect(()=>{
-        fetch('/api/host/listed_cars')
-        .then(res => res.json())
-        .then(data =>setVal(data.cars))
-    },[])
-    console.log(val)
-    const a=val.map(valu=>{
+export async function Loaddd({request}){
+   await requireAuth(request)
+
+   return defer({cars:getHostCars()}) 
+
+}
+
+export default function Lscars(){
+const val=useLoaderData()
+
+function rendCars(cars){
+    const a=cars.map(valu=>{
         return(
             <List
             key={valu.id}
@@ -22,6 +28,11 @@ export default function Lscars(){
             />
         )
     })
+return(<>
+{a}
+</>
+    
+)}
     return(
         <>
         <div className='bla2'>
@@ -30,7 +41,11 @@ export default function Lscars(){
            <Link to='/host' className='Link'>Back to dashboard</Link> 
         </div>
         </div>
-        {a}<br/>
+        <React.Suspense fallback={<Load/>}>
+            <Await resolve={val.cars}>
+                 {rendCars}
+                 </Await>
+        </React.Suspense><br/>
 
        </>
     )

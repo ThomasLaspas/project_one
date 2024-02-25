@@ -1,16 +1,16 @@
 import '../home/home.css'
-import { useEffect,useState } from 'react'
+
 import { useParams,useOutletContext } from 'react-router-dom'
-import Load from '../carss.jsx/loader'
+import Load from '../cars/loader'
 
 export default function Details(props){
-    const [valu,setValu]=useOutletContext()
+    const [valu]=useOutletContext()
    
 
 console.log(valu)
     return(
         <>
-        <div>
+        <div className='det'>
             <br/>
             {valu?<h4>Name:<span>{valu.name}</span></h4>:<Load/>}
             {valu?<h4>Category:<span>{valu.category}

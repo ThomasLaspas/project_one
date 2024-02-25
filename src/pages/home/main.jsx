@@ -1,5 +1,6 @@
+//the index page 
 import '../../index.css'
-import { Link } from 'react-router-dom'
+
 export default function Main(){
     return(
        <div className='main'>

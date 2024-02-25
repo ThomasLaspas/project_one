@@ -1,3 +1,4 @@
+//component for main about page
 import '../home/home.css'
 import rar from './rarri2.jpeg'
 
