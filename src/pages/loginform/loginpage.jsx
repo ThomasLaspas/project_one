@@ -12,12 +12,12 @@ export  async function action({request}){
     const password=datax.get('password')
     localStorage.setItem('name',email)
     //redirect to the page tha we are in before logout
-    const pathnme=new URL(request.url).searchParams.get('redirect') || '/host'
+    const pathname=new URL(request.url).searchParams.get('redirect') || '/host'
     //handle erros
     try{
         const data = await loginUser({email,password})
         localStorage.setItem('key',true)
-        return window.location.href = (pathnme);
+        return redirect(pathname)
     }catch(err){
         return err.message
     }   

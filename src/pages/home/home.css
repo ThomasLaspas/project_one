@@ -544,14 +544,16 @@ span{
    }
    .logo{
     gap: 10px;}
-    
+
    .first{
      display: block;
     
    }
-   .card h5, h4{
-    
-     font-size: 1em;
+   .card h4{
+    font-size: 1em;
+   }
+   .card h5{
+    font-size: 1em;
    }
    .card img{
      height: 15vh;
@@ -568,6 +570,21 @@ span{
  }
  #small{
   font-size: medium;
+ }
+ .list{
+  margin-top: 5%;
+ }
+ .cards{
+  margin-top: 0;
+  font-size: 1em;
+ }
+ .img {
+  height: 100px;
+  width: 100px;
+ }
+ .img img{
+  height: 100px;
+  width: 100px;
  }
   
   }
