@@ -7,10 +7,13 @@ import { loginUser } from '../../utilities/fetch'
 export  async function action({request}){
     //take tha data from the form 
     const datax= await request.formData()
+    console.log(datax)
     // we can take a specific value using the name of input
     const email=datax.get('email')
+    const name =datax.get('name')
     const password=datax.get('password')
-    localStorage.setItem('name',email)
+    localStorage.setItem('name',name)
+    console.log(name)
     //redirect to the page tha we are in before logout
     const pathname=new URL(request.url).searchParams.get('redirect') || '/host'
     //handle erros
@@ -34,7 +37,7 @@ export default  function Login(){
     const message=useLoaderData()
     const error=useActionData()
     const navi=useNavigation()
-    console.log(navi.state)
+   
 
 if(localStorage.getItem('key')){
     
@@ -55,22 +58,26 @@ if(localStorage.getItem('key')){
     <Form method='post' replace >
           
           <input 
-          id='email'
+            id='email'
             type="email" 
             name="email" 
             placeholder='Email address'
             required
           /><br/>
-         
-         
-            <input 
+           <input 
             required
             id='pas'
-              type="password" 
-              name="password" 
-              placeholder='Password'
-        
-            /><br/>
+            type="password" 
+            name="password" 
+            placeholder='Password'/>
+            <br/>
+            <input
+            style={{display:'none'}}
+            id='name'
+            type='text'
+            name='name'
+            value='thomas'
+            />
          
            <input type="submit"  id='in' value={navi.state==='submitting'?'':'Sign in'} disabled={navi.state==='submitting'} />
         </Form>

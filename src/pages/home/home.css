@@ -70,11 +70,9 @@ main{
 .texts{
     width: 80%;
     margin-top: 20%;
-
 }
 .texts p{
     font-size: 1.3em;
-  
 }
 .texts h1{
     font-size: 2.3em;
@@ -284,7 +282,6 @@ font-size: 1.4em;
 /* for the host component */
 .up{
   width: 100%;
-
 padding: 4%;
 background-color: lightcoral;
 }
@@ -499,6 +496,10 @@ span{
   .footer{
    padding: 2%;
   }
+  .nav{
+    padding: 3%;
+    font-size: 1.5em;
+  }
   .card img{
    height: 35vh;
    width: 100%;
@@ -528,6 +529,26 @@ span{
 }
 #car h4{
   font-size: 1.8em;
+}
+ 
+ }
+ @media screen  and (max-width:900px){
+  .text{
+    margin-top: 3%; 
+   }
+   .links{
+    gap: 10px;
+  }
+.logo{
+    gap: 10px;}
+  .text p{
+    font-size: 1.3em;
+}
+.text h1{
+    font-size: 1.8em;
+}
+.text button{
+  font-size: 1.3em;
 }
  
  }
@@ -586,5 +607,15 @@ span{
   height: 100px;
   width: 100px;
  }
+ .text{
+ margin-top: 3%;
+  font-size: 1em;
+}
+.text button{
+  font-size: 1em;
+}
+.text img{
+  height: 25vh;
+}
   
   }
