@@ -86,6 +86,7 @@ main{
     color: whitesmoke;
     font-family: "Black Ops One", system-ui;
     font-size: 1.6em;
+    border: none;
 }
 
 /* for the about page */
@@ -534,10 +535,16 @@ span{
    .header{
     font-size: 0.4em;
    }
+   .links{
+    gap: 8px;
+   }
    .logo img{
      width: 40px;
      height: 40px;
    }
+   .logo{
+    gap: 10px;}
+    
    .first{
      display: block;
     
