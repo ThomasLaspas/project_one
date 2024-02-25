@@ -24,7 +24,7 @@ img:'https://www.carandmotor.gr/sites/default/files/styles/horizontal_rectangle/
 server.create('car',{id:'6',name:"ferrari daytona",price:"3.500.000",
 description:"At the 1967 24 Hours of Daytona, Ferrari took the top three places in the first round of the International World Sports Car Championship. The 330 P3/4, 330 P4 and 412 P that famously shot past the chequered flag side by side perfectly encapsulated the spirit of the sports prototypes of the 1960s, a decade now considered the golden era of closed wheel racing. The Ferrari Daytona SP3, the second car to join the limited edition Icona series, pays homage to the mid-rear-engined Ferrari V12 sports prototypes that earned the marque its unparalleled motor sport status.",
 img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyevcT_uWJXgdb-LH4K-zVrDGZkUTt9ELTEA&usqp=CAU', hostId:'123',category:'sports car',type:'sports car'})
-server.create("user", { id: "123", email: "makislaspas@gmail.com", password: "Benz1926", name: "Thomas" })
+server.create("user", { id: "123", email: "admin@gmail.com", password: "12345", name: "Thomas" })
     },
 
     routes(){
